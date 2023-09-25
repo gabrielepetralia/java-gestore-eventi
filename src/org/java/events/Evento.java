@@ -20,7 +20,10 @@ public class Evento {
 		return titolo;
 	}
 
-	public void setTitolo(String titolo) {
+	public void setTitolo(String titolo) throws Exception {
+		if (titolo.isBlank())
+			throw new Exception("Il titolo non può essere vuoto");
+		
 		this.titolo = titolo;
 	}
 
@@ -92,7 +95,7 @@ public class Evento {
 	
 	@Override
 	public String toString() {
-		 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		 return getData().format(formatter) + " - " + getTitolo(); 
 	}
 
