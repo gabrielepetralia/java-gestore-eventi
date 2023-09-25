@@ -16,7 +16,6 @@ public class Concerto extends Evento{
 		
 		setOrario(orario);
 		setPrezzo(prezzo);
-		
 	}
 
 	public LocalTime getOrario() {
