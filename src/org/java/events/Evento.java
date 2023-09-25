@@ -96,7 +96,9 @@ public class Evento {
 	@Override
 	public String toString() {
 		 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		 return getData().format(formatter) + " - " + getTitolo(); 
+		 String dataFormattata = getData().format(formatter);
+		 
+		 return dataFormattata + " - " + getTitolo(); 
 	}
 
 }
